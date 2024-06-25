@@ -827,10 +827,6 @@ input::-webkit-inner-spin-button {
     border-color: #0c73fe;
   }
 
-  .number-input {
-    width: 100%;
-  }
-
   #close-popup-btn {
     display: flex;
     align-items: center;
