@@ -1,0 +1,890 @@
+@font-face {
+  font-family: "Sharp-Grotesk-DB-Cyr-Medium-22-Regular";
+  src: url("../fonts/Sharp-Grotesk-DB-Cyr-Medium-22-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "joane-bold";
+  src: url("../fonts/joane-bold.woff2") format("woff2");
+  font-weight: bold;
+  /* Полужирный (bold) шрифт */
+  font-style: normal;
+  /* Обычный (стандартный) стиль шрифта */
+}
+
+@font-face {
+  font-family: "SFProDisplay-Semibold";
+  src: url("../fonts/SFProDisplay-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  /* Полужирный (semibold) шрифт */
+  font-style: normal;
+  /* Обычный (стандартный) стиль шрифта */
+}
+
+@font-face {
+  font-family: "SFProDisplay-Regular";
+  src: url("../fonts/SFProDisplay-Regular.woff2") format("woff2");
+  font-weight: normal;
+  /* Обычный (стандартный) вес шрифта */
+  font-style: normal;
+  /* Обычный (стандартный) стиль шрифта */
+}
+
+body {
+  font-family: "SFProDisplay-Regular";
+  font-size: 16px;
+}
+
+.header-section {
+  background-color: #f0f0f0;
+  background-image: url("../images/background.png");
+  background-size: cover;
+}
+
+.site-header {
+  height: 77px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* Для абсолютного позиционирования иконки выхода */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 375px;
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 212px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logout-container {
+  position: absolute;
+  right: 31px;
+}
+
+.logout-icon {
+  display: block;
+  width: 15px;
+  height: 18px;
+}
+
+.site-header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.header-content_title {
+  text-align: center;
+}
+
+.header-content_title {
+  margin: 29px 46px 22px 47px;
+}
+
+h1 {
+  font-family: "Sharp-Grotesk-DB-Cyr-Medium-22-Regular";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.header-content_booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Центрируем поля по горизонтали */
+  box-sizing: border-box;
+}
+
+.input-field {
+  font-family: "SFProDisplay-Regular";
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 344px;
+  height: 54px;
+  color: #505a68ad;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 0 18px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 344px;
+  height: 104px;
+  margin-top: 7px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 10px;
+  color: #505a68ad;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Выравниваем элементы по краям */
+  width: 100%;
+  /* Занимаем всю доступную ширину */
+  margin-bottom: 5px;
+}
+
+.input-container label {
+  flex: 1;
+  /* Растягиваем метку на всю доступную ширину */
+  margin-right: 10px;
+}
+
+.slider-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.time-slider {
+  width: 100%;
+  background-color: #0c73fe;
+  /* Цвет слайдера */
+}
+
+.time-slider::-webkit-slider-thumb {
+  background-color: #0c73fe;
+  /* Цвет круга (ползунка) */
+  border-color: #0c73fe;
+  /* Цвет обводки круга (ползунка) */
+}
+
+.time-slider::-moz-range-thumb {
+  background-color: black;
+  /* Цвет круга (ползунка) */
+  border-color: #0c73fe;
+  /* Цвет обводки круга (ползунка) */
+}
+
+.time-slider::-ms-thumb {
+  width: 12px;
+  /* Диаметр круга */
+  height: 12px;
+  /* Диаметр круга */
+  border-radius: 50%;
+  /* Создаем круглую форму */
+  background-color: #0c73fe;
+  /* Цвет внешнего круга */
+  display: flex;
+  /* Используем flexbox */
+  justify-content: center;
+  /* Выравниваем содержимое по центру по горизонтали */
+  align-items: center;
+  /* Выравниваем содержимое по центру по вертикали */
+  position: relative;
+  /* Для позиционирования псевдоэлемента */
+}
+
+.slider-labels {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+
+.slider-labels span {
+  font-size: 11px;
+  color: #505a68ad;
+  text-align: center;
+  position: relative;
+}
+
+.slider-labels span::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 6px;
+  background-color: #dee6f0;
+}
+
+.top-input {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.bottom-input {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.number-input {
+  width: 50px;
+  /* Ширина поля ввода числа */
+  text-align: right;
+  /* Выравниваем текст ввода числа по правому краю */
+  border: none;
+  /* Убираем границу у внутреннего поля */
+  outline: none;
+  /* Убираем outline при фокусе */
+  font-size: 14px;
+  color: #505a68;
+}
+
+.time-input {
+  width: 42px;
+  height: 21px;
+  text-align: center;
+  /* Выравниваем текст ввода времени по правому краю */
+  border: 1px solid #ccc;
+  /* Граница для серого окошка */
+  background-color: #ffffff;
+  /* Цвет фона для серого окошка */
+  border-radius: 6px;
+  font-size: 14px;
+  color: #505a68;
+}
+
+.time-coin {
+  flex: 1;
+  width: 100%;
+}
+
+.coin-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5px;
+  color: #505a68ad;
+  height: 25px;
+}
+
+.yacht-search {
+  width: 344px;
+  height: 85px;
+  background-color: #0c73fe;
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 60px;
+}
+
+.yacht-search-content {
+  text-align: center;
+}
+
+.yacht-search-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 11px;
+}
+
+.yacht-search-subtitle {
+  font-size: 11px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  background-color: #0b67e5;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.items-container {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* Отступ между блоками */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 234px;
+  /* Высота блока */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* Чтобы псевдоэлемент не выходил за границы блока */
+  border-radius: 8px;
+  justify-content: flex-end;
+}
+
+.item-1::after,
+.item-2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  /* Высота затемненного участка */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  /* Градиентное затемнение сверху вниз */
+  z-index: 1;
+}
+
+.item .name,
+.item .details {
+  z-index: 2;
+}
+
+.item-1 {
+  background-image: url("../images/items-1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.item-2 {
+  background-image: url("../images/items-2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.item-3 {
+  background-image: url("../images/items-3.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.item-4 {
+  background-image: url("../images/items-4.png");
+  /* Путь к изображению */
+  background-size: cover;
+  background-position: center;
+}
+
+.item .content {
+  margin-top: auto;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.label {
+  font-size: 11px;
+  color: #999999;
+}
+
+.value,
+.name {
+  font-size: 12px;
+  color: #ffff;
+}
+
+.name {
+  color: #ffff;
+  font-size: 16px;
+}
+
+.show-more-container {
+  display: flex;
+  align-items: center;
+  height: 128px;
+  justify-content: center;
+}
+
+.plus-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 18px;
+}
+
+.show-more-text {
+  font-size: 18px;
+}
+
+.footer-mobile {
+  background-color: #051934;
+  width: 100%;
+  padding: 20px 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-line {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.whatsapp-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 194px;
+  height: 46px;
+  background-color: #65cf72;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+.whatsapp-icon img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.whatsapp-text {
+  font-size: 16px;
+}
+
+.footer-desktop {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .site-header {
+    width: 100%;
+  }
+
+  .header-container {
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+  }
+
+  .logo-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .logout-container {
+    position: absolute;
+    right: 31px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 20px;
+  }
+
+  .item:nth-of-type(n + 5) {
+    display: none;
+  }
+
+  .label {
+    font-size: 11px;
+    color: #999999;
+    margin-top: 5px;
+  }
+
+  .visible-rec_desk {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .content_booking {
+    display: flex;
+    justify-content: space-between;
+    width: 824px;
+  }
+
+  .top-input,
+  .bottom-input {
+    border-radius: 0px;
+  }
+
+  .top-input {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .bottom-input {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .container-sliders {
+    width: 824px;
+    display: flex;
+  }
+
+  .container {
+    width: 100%;
+    flex: 50%;
+    box-sizing: border-box;
+  }
+
+  .mr10 {
+    margin-right: 10px;
+  }
+
+  .yacht-search {
+    width: 824px;
+  }
+
+  .yacht-search-title {
+    font-size: 20px;
+  }
+
+  .yacht-search-subtitle {
+    font-size: 13px;
+    padding: 8px 20px;
+  }
+
+  .items-container {
+    display: grid;
+  }
+
+  .items-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .footer-mobile {
+    display: none;
+  }
+
+  .footer-desktop {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 95px;
+    background-color: #051934;
+    color: white;
+    font-size: 18px;
+  }
+
+  .footer-left {
+    text-align: left;
+  }
+
+  .footer-center {
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: right;
+  }
+
+  .footer-center img {
+    margin: 0 10px;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0px 20px 0 20px;
+  }
+
+  .footer-center {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-section {
+    background-color: #f0f0f0;
+    background-image: url("../images/background-desktop.png");
+    background-size: cover;
+    height: 480px;
+  }
+
+  .details .column:not(:first-child) {
+    display: none;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .value {
+    font-size: 16px;
+  }
+
+  .label {
+    font-size: 14px;
+    color: #505a68;
+  }
+
+  .time-coin {
+    color: #505a68;
+  }
+
+  .visible-rec_mob {
+    display: none;
+  }
+
+  .name {
+    color: #ffff;
+    font-size: 18px;
+    order: 1;
+    margin-bottom: 15px;
+  }
+
+  .details {
+    order: 2;
+  }
+
+  .input-field {
+    height: 60px;
+    width: 100%;
+  }
+
+  .container {
+    margin-top: 11px;
+  }
+
+  .item {
+    padding: 16px;
+  }
+
+  .inactive {
+    position: relative;
+    pointer-events: none;
+  }
+
+  .inactive::before {
+    content: "Временно недоступно";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 14px;
+    border-radius: 3px;
+    z-index: 2;
+  }
+
+  .inactive::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  .show-more-container {
+    height: 110px;
+  }
+  .items-container {
+    padding: 20px 20px 0 20px;
+  }
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    display: none; /* Скрыто по умолчанию */
+    width: 100%;
+    height: 100%;
+    background-color: #eff1f4;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+
+  .popup.show {
+    display: flex; /* Показать всплывающее окно */
+    opacity: 1;
+    z-index: 99;
+    background-color: #000000c7;
+  }
+
+  .popup-container {
+    width: 1220px; /* Ширина всплывающего окна */
+    height: 606px; /* Высота всплывающего окна */
+    background-color: #eff1f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для всплывающего окна */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .image-container {
+    width: 513px;
+    height: 506px;
+    background-image: url("../images/popup.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .form-container {
+    width: 535px;
+    height: 506px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .form-title {
+    font-family: "Sharp-Grotesk-DB-Cyr-Medium-22-Regular";
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .form-description {
+    font-family: "SFProDisplay-Regular";
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .form_booking {
+    display: flex;
+    justify-content: space-between;
+    width: 535px;
+    box-sizing: border-box;
+  }
+
+  .form_booking .input-field {
+    width: 260px;
+  }
+
+  .form-container .input-field {
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  .popup-form button {
+    width: 535px;
+    height: 80px;
+    background-color: #0c73fe;
+    border: 0px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  form p {
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  form a {
+    color: black;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #505a68;
+  }
+
+  .form-group input {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out;
+  }
+
+  .form-group input:focus {
+    outline: none;
+    border-color: #0c73fe;
+  }
+
+  .number-input {
+    width: 100%;
+  }
+
+  #close-popup-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 30px;
+    width: 126px;
+    height: 37px;
+    border: 0;
+    background-color: #0000001f;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    cursor: pointer;
+  }
+
+  #close-pop-btn img {
+    width: 11px;
+    height: 11px;
+  }
+}

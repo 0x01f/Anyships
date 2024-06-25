@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anyships - Сервис бронирования Яхт в Дубае</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <section class="header-section">
+      <header class="site-header">
+        <div class="header-container">
+          <div class="logo-container">
+            <img src="images/logo.png" alt="Логотип" width="210" height="41" />
+          </div>
+          <div class="logout-container">
+            <a href="#" class="logout-icon">
+              <img
+                src="images/exit.svg"
+                alt="Иконка выхода"
+                width="17"
+                height="20"
+              />
+            </a>
+          </div>
+        </div>
+      </header>
+      <div class="header-content">
+        <div class="header-content_title">
+          <h1>Бронирование яхт в Дубае</h1>
+        </div>
+        <div class="header-content_booking">
+            <div class="content_booking">
+                <div class="input-field top-input">
+                    <label for="persons">Количество персон</label>
+                    <input type="number" id="persons" class="number-input" />
+                  </div>
+                  <div class="input-field">
+                    <label for="hours">Количество часов</label>
+                    <input type="number" id="hours" class="number-input" />
+                  </div>
+                  <div class="input-field bottom-input">
+                    <label for="date">Дата</label>
+                    <img
+                      src="images/Vector.png"
+                      alt="Календарь"
+                      class="calendar-icon"
+                    />
+                  </div>
+            </div>
+            <div class="container-sliders">
+                <div class="container mr10">
+                    <div class="input-container">
+                      <label for="start-time">Время начала</label>
+                      <input
+                        type="number"
+                        id="start-time"
+                        class="time-input"
+                        min="1"
+                        max="24"
+                      />
+                    </div>
+                    <div class="slider-container">
+                      <input
+                        type="range"
+                        class="time-slider"
+                        min="1"
+                        max="24"
+                        value="1"
+                        step="1"
+                      />
+                      <div class="slider-labels">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span>10</span>
+                        <span>11</span>
+                        <span>12</span>
+                        <span>13</span>
+                        <span>14</span>
+                        <span>15</span>
+                        <span>16</span>
+                        <span>17</span>
+                        <span>18</span>
+                        <span>19</span>
+                        <span>20</span>
+                        <span>21</span>
+                        <span>22</span>
+                        <span>23</span>
+                        <span>24</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container">
+                    <div class="coin-container">
+                      <label for="time-coin">Цена / час</label>
+                    </div>
+                    <div class="slider-container">
+                      <input
+                        type="range"
+                        class="time-slider"
+                        min="1"
+                        max="24"
+                        value="1"
+                        step="1"
+                      />
+                      <div class="slider-labels">
+                        <span>От 5 000 руб</span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span> </span>
+                        <span>До 130 000 руб</span>
+                      </div>
+                    </div>             
+                  </div>
+            </div>  
+          <div class="yacht-search">
+            <div class="yacht-search-content">
+              <div class="yacht-search-title">Найти яхту по фильтру</div>
+              <div class="yacht-search-subtitle">Для 8 человек на 16 часов - 25 февраля 2024 с 15:00</div>
+            </div>
+        </div> 
+      </div>
+    </section>
+    <main>
+      <div class="items-container">
+        <div class="item item-1" id="open-popup-btn">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-2">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-3">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-4">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-1">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-1">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-2">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-3">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-4">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-1">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-1">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-2">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-3">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-4">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-1">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-1">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-2">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-3">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-4">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+        <div class="item item-1">
+          <div class="name">Яхта Azimut 68 Princess</div>
+          <div class="details">
+            <div class="column">
+              <div class="value">1 500 руб</div>
+              <div class="label visible-rec_mob">Рек. цена</div>
+              <div class="label visible-rec_desk">Рекомендованная цена</div>
+            </div>
+            <div class="column">
+              <div class="value">3 000 руб</div>
+              <div class="label">Текущая цена</div>
+            </div>
+            <div class="column">
+              <div class="value">40 м</div>
+              <div class="label">Длина яхты</div>
+            </div>
+            <div class="column">
+              <div class="value">8 чел</div>
+              <div class="label">Вместимость</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="show-more-container">
+        <img src="images/x.png" alt="Плюс" class="plus-icon" />
+        <span class="show-more-text">Показать больше яхт</span>
+      </div>
+    </main>
+    <div class="popup" id="popup">
+      <div class="popup-container">
+        <button id="close-popup-btn"><img src="../images/x1.png" alt="">Закрыть</button>
+        <div class="image-container"></div>
+        <form action="#" method="POST" class="popup-form">
+          <div class="form-container">
+            <div class="form-title">Бронирование яхты</div>
+            <div class="form-description">
+              Заполните форму ниже, чтобы забронировать яхту, после чего наши
+              специалисты свяжутся с вами, чтобы уточнить детали.
+            </div>
+            <div class="form_booking">
+              <div class="input-field top-input">
+                <label for="persons">Количество персон</label>
+                <input type="number" id="persons" class="number-input" />
+              </div>
+              <div class="input-field">
+                <label for="hours">Количество часов</label>
+                <input type="number" id="hours" class="number-input" />
+              </div>
+            </div>
+            <div class="input-field">
+              <label for="fio">ФИО</label>
+              <input type="text" id="fio" class="number-input" placeholder="Иванов Иван Иванович" oninput="formatFio(this)">
+            </div>
+            <div class="input-field">
+              <label for="phone">Номер телефона</label>
+              <input type="text" id="phone" class="number-input" placeholder="+7 (___) ___ __ __" onkeypress="allowOnlyNumbers(event)">
+            </div>
+            <button type="submit" class="submit-btn">Отправить</button>
+            <p>Пользуясь данной формой вы соглашаетесь с <a href="#">политикой компании</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="footer-mobile">
+      <div class="footer-content">
+        <div class="footer-line">Rental yacht - customer service</div>
+        <div class="footer-line">+971 58 517 4744</div>
+        <div class="footer-line">
+          <div class="whatsapp-icon">
+            <img src="images/whatsapp.png" alt="WhatsApp" />
+            <span class="whatsapp-text">WhatsApp us</span>
+          </div>
+        </div>
+        <div class="footer-line">Dubai, United Arab Emirates</div>
+      </div>
+    </footer>
+    <footer class="footer-desktop">
+      <div class="footer-content">
+        <div class="footer-left">По всем вопросам +7971585174744</div>
+        <div class="footer-center">
+          <img src="images/whatsapp.png" alt="WhatsApp" />
+          <img src="images/facebook.png" alt="Facebook" />
+          <img src="images/instagram.png" alt="Instagram" />
+        </div>
+        <div class="footer-right">Политика конфиденциальности</div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
